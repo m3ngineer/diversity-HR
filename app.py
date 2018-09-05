@@ -25,16 +25,19 @@ def predict():
 
     if request.method == 'POST':
 
-        comment = request.form['comment']
+        user_input = request.form['user_input']
         tfidf = TfidfVectorizer(stop_words='english', tokenizer=LemmaTokenizer())
 
         tfidf.fit(train_X, train_labels)
 
-        data = tfidf.transform([comment]) #[article for article in comment]
+        data = tfidf.transform([user_input]) #[article for article in comment]
 
         my_prediction = clf.predict(data)
 
-    return render_template('results.html', prediction=my_prediction)
+    return render_template('results.html',
+                            prediction=my_prediction,
+                            user_input=user_input
+                            )
 
 # def train_model():
 #     divcorpus = pd.read_csv('diversity_corpus.csv')

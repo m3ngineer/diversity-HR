@@ -166,6 +166,10 @@ img.icons {
     background-color: rgba(0, 0, 0, 0.7);
 }
 
+.user_input {
+    background-color: rgba(55, 55, 55, 0.7);
+}
+
 </style>
 </head>
 
@@ -182,6 +186,10 @@ img.icons {
     {% elif prediction == 0 %}
     <h2 stye='color: #00cc99;'>Document is gender neutral</h2>
     {% endif %}
+
+    <div class='user_input'>
+      {{ user_input }}
+    </div>
   </div>
 </div>
 </body>
