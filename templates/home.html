@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Improving diversity in hiring</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" >
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
+
+<style type="text/css">
+
+body {
+}
+
+body, p {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 56px;
+  font-weight: 300;
+  margin: 0 0 20px 0;
+}
+
+a {
+ text-decoration: none;
+}
+
+ul {
+    text-align: center;
+    list-style-position: inside;
+}
+
+.white-text {
+ color: white;
+}
+
+.spacer1 {
+ height: 15vh;
+ width: 100%;
+ margin: 0 0;
+ background-color: black;
+}
+
+.spacer2 {
+ height: 50vh;
+ width: 100%;
+ margin: 0 0;
+}
+
+.spacer3 {
+ height: 100vh;
+ width: 100%;
+ margin: 0 0;
+}
+
+.spacer4 {
+ height: 40vh;
+ width: 100%;
+ margin: 0 0;
+ border-style: solid;
+ border-with: 2px;
+ border-color: black;
+}
+
+.welcome {
+ height: 300px;
+ width: 60%;
+ background-color: rgba(255, 255, 255, 0.8);
+ margin: 0 auto;
+ padding: 20px;
+ border-radius: 2px;
+}
+
+.work {
+ width: 90%;
+ padding: 20px 0px;
+ margin: 0 auto;
+ background-color: rgba(255, 255, 255, 1);
+ border-style: solid;
+ border-width: 0px;
+ border-color: black;
+}
+
+.textbox {
+  width: 100vh;
+  height: 100px;
+  padding: 12px 20px;
+  border: 2px solid gray;
+  border-radius: 4px;
+}
+
+input[type=text]:focus {
+    border: 3px solid #00cc99;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+    background-color: #00cc99;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+a.projects {
+ color: white;
+ font-size: 18 px;
+ line-height: 80px;
+}
+
+a.projects:hover {
+ color: grey;
+}
+
+.connect {
+ height: 100px;
+ width: 100%;
+ background-color: rgba(255, 255, 255, 1);
+ border-style: solid;
+ border-with: 2px;
+ border-color: black;
+ padding: 30px;
+}
+
+img.icons {
+ height: 50px;
+ width: 50px;
+ padding: 0 10px;
+}
+
+.parallax1 {
+    /* The image used */
+    background-image: url("images/polygon.jpg");
+
+    /* Set a specific height */
+    height: 100%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax2 {
+    /* The image used */
+    background-image: url("images/polygon.jpg");
+
+    /* Set a specific height */
+    height: 100%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.layer {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+</style>
+</head>
+
+<body>
+ <div class='spacer1'></div>
+
+ <div class='work'>
+  <h1 style='color: #00cc99'>Improving diversity in hiring</h1>
+  <h2>Detecting gender-biased langauge in job descriptions</h2>
+
+  Studies show that subtle gender-biased language in job advertisements can deter men and women from applying to certain jobs. Gender gaps are especially prevalent in insurance, business, finance, and tech sectors. This loss of diversity can negatively impact company performance. We’re here to increase diverse hiring by helping recruiters create gender-neutral job postings and establish inclusivity and diversity in the workplace.
+
+</div>
+
+<div class='ml-container'>
+
+    <form method="post" name='predict' action="{{ url_for('predict')}}">
+      <p><b>Enter job description text here</b></p>
+      <br>
+      <input type="text" name="comment" class='textbox' />
+      <!-- <textarea name='comment', rows=4, cols='50'></textarea> -->
+      </br>
+      <br>
+      <input type='submit' class='btn-info' values='predict' value='Score'>
+    </form>
+
+</body>
+</html>
