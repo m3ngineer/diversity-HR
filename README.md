@@ -19,7 +19,7 @@ The model will return a score and flag words that are considered gender-specific
 ### To run the app:
 This prototype is a web-based app built in python and Flask. To run, please use app.py.
 
-![Image of landing page](/static/img/diversity-HR_landing.png)
+![Image of landing page](static/img/diversity-HR_landing.png =300x)
 
 The demo: https://pr.to/0PYECH/
 
